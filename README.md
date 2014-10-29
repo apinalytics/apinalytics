@@ -14,10 +14,11 @@ Send events by POSTing JSON to the following URL.  You'll need to set Content-Ty
 
 `POST /1/events/`
 
-The JSON must be an array of objects with the following fields
+The JSON must be an array of objects with the following fields.
+
 
 | Field | Description |
-|-- | --|
+|---|---|
 | timestamp | Event UNIX epoch timestamp in seconds (seconds since 1st Jan 1970 UTC) |
 | consumer_id | A string that identifies the consumer of your API |
 | method | The method used for the API request (e.g. POST, GET, DELETE, etc) |
@@ -36,7 +37,7 @@ The query URL is as follows.  Start and end times are in seconds since 1st Janua
 The available parameters are as follows.
 
 | Param | Default | Description |
-| --    | --      | --          |
+| ---    | ---      | ---          |
 | value | "response_us"| The name of the value to aggregate.  This must be the name of a numeric field.  At the moment only "response_us" is valid |
 | granularity | omitting granularity results in all data in the time period being aggregated in a single time bucket | The granularity of the aggregation. Can be specified in seconds, or can be "second", "minute", "hour", "day", "week" |
 | aggregation | "count" | Aggregation function to apply.  Values include "count", "mean", "min", "max", "sum".  Also "percentile_X", where X is a number from 1 to 99 |
@@ -83,7 +84,7 @@ Query responses are in JSON.  Here is an example, with data grouped by function.
 The fields are as follows
 
 | field name  | description |
-|--|--|
+|---|---|
 |groups | A dictionary of time series.  The keys are the items the data is grouped by.  For example if you use group=method, the dictionary keys will be "GET", "PUT", "POST", etc.  The values are the timeseries data, as <timestamp, value> pairs |
 | start | Start of the time period the response represents. Time is in seconds since 1 Jan 1970 UTC (UNIX epoch) |
 | end | End of the time period the response represents. |
