@@ -15,7 +15,7 @@ To get started go to http://apinalytics.tanktop.tv/u/ and login with your github
 ### Sending events
 Send events by POSTing JSON to the following URL.  You'll need to set Content-Type to "application/json".
 
-`POST /1/events/`
+`POST http://apinalytics.tanktop.tv/1/events/`
 
 The JSON must be an array of objects with the following fields.
 
@@ -37,7 +37,7 @@ Apinalytics include an API that allows you to query your event data as time seri
 
 The query URL is as follows.  Start and end times are in seconds since 1st January 1970 UTC (Unix epoch).
 
-`GET /1/timeseries/<start time>/<end time>/`
+`GET http://apinalytics.tanktop.tv/1/timeseries/<start time>/<end time>/`
 
 The available parameters are as follows.
 
