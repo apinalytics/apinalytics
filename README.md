@@ -1,6 +1,8 @@
 # Apinalytics
 
-Analytics for APIs
+Analytics for APIs.
+
+We built Apinalytics because we wanted simple, cheap analytics for an API and we couldn't find a great solution.  Now we've built it we're looking at opening it up to the public.  If you're interested please let us know via our [launchrock page](http://apinalytics.launchrock.com/).  If you have any comments please let us know via this project's [issues](https://github.com/apinalytics/apinalytics/issues).  If you want to hear how we get on [follow us on twitter](https://twitter.com/apinalytics).
 
 
 ## API
