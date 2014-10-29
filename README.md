@@ -7,7 +7,7 @@ We built APInalytics because we wanted simple, cheap analytics for an API and we
 We've not yet finalised pricing, but we do intend this to be a commercial project and will charge for it.  However, for the moment you can play for free.  Help shape our pricing and business by responding to our [survey](http://goo.gl/forms/hMVmYKCKeU)
 
 ## API
-Apinalytics is analytics for APIs, and you access it via APIs.  There's an API for sending events and an API for querying the data.  To make things easier we've supplied client event sending API for [go](https://github.com/apinalytics/apinalytics_client) (for more languages and frameworks see [here](https://github.com/apinalytics/apinalytics/wiki/Sending-Events---clients-for-different-languages) ) and an example html dashboard that you can run locally and edit.
+Apinalytics is analytics for APIs, and you access it via APIs.  There's an API for sending events and an API for querying the data.  To make things easier we've supplied client event sending API for [go](https://github.com/apinalytics/apinalytics_client) (for more languages and frameworks see [here](https://github.com/apinalytics/apinalytics/wiki/Sending-Events---clients-for-different-languages) ) and an [example html dashboard](https://github.com/apinalytics/apinalytics_dashboard) that you can run locally and edit.
 
 ### Identity and authentication
 To get started go to http://apinalytics.tanktop.tv/u/ and login with your github account (warning, at the moment this is _extremely_ bared boned).  This will generate an Application ID, a _write_ key and a _read_ key.  Include the Application ID in an X-Auth-User header in all API requests.  When you send events include the _write_ key in an X-Auth-Key header.  When querying events include the _read_ key in the X-Auth-Key header.
@@ -33,7 +33,7 @@ The JSON must be an array of objects with the following fields.
 In the future we may add the ability to include arbitrary additional fields.
 
 ### The Query API
-Apinalytics include an API that allows you to query your event data as time series.  You can group and aggregate your data in various ways. Or you can cheat and use our example html dashboard.
+Apinalytics include an API that allows you to query your event data as time series.  You can group and aggregate your data in various ways. Or you can cheat and use our [example html dashboard](https://github.com/apinalytics/apinalytics_dashboard).
 
 The query URL is as follows.  Start and end times are in seconds since 1st January 1970 UTC (Unix epoch).
 
