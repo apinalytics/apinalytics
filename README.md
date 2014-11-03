@@ -4,13 +4,15 @@ Analytics for APIs.
 
 We built APInalytics because we wanted simple, cheap analytics for an API and we couldn't find a great solution.  Now we've built it we're looking at opening it up to the public.  If you're interested please let us know via our [launchrock page](http://apinalytics.launchrock.com/) - if you're _really_ interested just follow the instructions below and jump in.  If you have any comments please let us know via this project's [issues](https://github.com/apinalytics/apinalytics/issues).  If you want to hear how we get on [follow us on twitter](https://twitter.com/apinalytics).
 
-We've not yet finalised pricing, but we do intend this to be a commercial project and will charge for it.  However, for the moment you can play for free.  Help shape our pricing and business by responding to our [survey](http://goo.gl/forms/hMVmYKCKeU)
+Unlike other API analytics providers we don't host your API or require you to run your API queries through our proxies. You simply insert a little bit of server-side code to report events to us. The APInalytics API (very meta) lets you retrieve data about those events in all sorts of ways, so you can build your own dashboard - or use our example one.
+
+APInalytics is free to use in this trial phase, although we do intend this to be a commercial project and to start charging something for it eventually. We hope to provide a cost-effective API solution, and there will likely be a free tier. Your data is yours, and if you decide the paid service (when we launch it) isn't for you, you'll be able to extract the data you've already stored for free. You can help shape our pricing and business by responding to our [survey](http://goo.gl/forms/hMVmYKCKeU).
 
 ## API
 Apinalytics is analytics for APIs, and you access it via APIs.  There's an API for sending events and an API for querying the data.  To make things easier we've supplied client event sending API for [go](https://github.com/apinalytics/apinalytics_client) ([Sorry](https://twitter.com/iamdevloper/status/524976026313826304)) (for more languages and frameworks see [here](https://github.com/apinalytics/apinalytics/wiki/Sending-Events---clients-for-different-languages) ) and an [example html dashboard](https://github.com/apinalytics/apinalytics_dashboard) that you can run locally and edit.
 
 ### Identity and authentication
-To get started go to http://apinalytics.tanktop.tv/u/ and login with your github account (warning, at the moment this is _extremely_ bared boned).  This will generate an Application ID, a _write_ key and a _read_ key.  Include the Application ID in an X-Auth-User header in all API requests.  When you send events include the _write_ key in an X-Auth-Key header.  When querying events include the _read_ key in the X-Auth-Key header.
+To get started go to http://apinalytics.tanktop.tv/u/ and login with your GitHub account.  This will generate an Application ID, a _write_ key and a _read_ key.  Include the Application ID in an X-Auth-User header in all API requests.  When you send events include the _write_ key in an X-Auth-Key header.  When querying events include the _read_ key in the X-Auth-Key header.
 
 ### Sending events
 Send events by POSTing JSON to the following URL.  You'll need to set Content-Type to "application/json".
